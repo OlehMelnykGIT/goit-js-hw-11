@@ -1,43 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goit-js-hw-11</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>goit-js-hw-10</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <body>
+    <main>
+      <section class="search-section">
+        <form class="form">
+          <label>
+            <input type="text" name="search-text" placeholder="Search images..." required />
+          </label>
+          <button type="submit">Search</button>
+        </form>
 
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html" aria-label="Site logo">
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="./img/logo.svg"></use>
-          </svg>
-        </a>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-act}" href="./1-timer.html">Timer </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html">Snackbar</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</head>
+        <div class="loader is-hidden" aria-label="Loading"></div>
+        <ul class="gallery"></ul>
+      </section>
+    </main>
 
-<body>
-
-
-  <main>
-    <!-- Loads the specified .html file -->
-
-  </main>
-
-
-</body>
-
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

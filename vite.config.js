@@ -13,20 +13,20 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: glob.sync('./*.html', { cwd: 'src', absolute: true }),
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
               return 'vendor';
             }
           },
-          entryFileNames: chunkInfo => {
+          entryFileNames: (chunkInfo) => {
             if (chunkInfo.name === 'commonHelpers') {
               return 'commonHelpers.js';
             }
             return '[name].js';
           },
-          assetFileNames: assetInfo => {
+          assetFileNames: (assetInfo) => {
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {
               return '[name].[ext]';
             }

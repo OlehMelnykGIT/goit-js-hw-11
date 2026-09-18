@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "goit-js-hw-11",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/goit-js-hw-10/",
+    "build": "vite build --base=/goit-js-hw-11/",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -21,7 +21,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "flatpickr": "^4.6.13",
+    "axios": "^1.20.0",
     "izitoast": "^1.4.0",
     "simplelightbox": "^2.14.3",
     "vite-plugin-full-reload": "^1.2.0",

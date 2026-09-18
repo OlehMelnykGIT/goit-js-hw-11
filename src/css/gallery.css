@@ -1,0 +1,152 @@
+.search-section {
+  width: min(100% - 32px, 1128px);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.form label {
+  width: min(100%, 272px);
+}
+
+.form input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  color: #2e2f42;
+  font: inherit;
+  letter-spacing: 0;
+  transition: border-color 250ms ease;
+}
+
+.form input:hover {
+  border-color: #000;
+}
+
+.form input:focus,
+.form input:focus-visible {
+  border-color: #4e75ff;
+}
+
+.form input::placeholder {
+  color: #808080;
+}
+
+.form button {
+  min-width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: background-color 250ms ease;
+}
+
+.form button:hover,
+.form button:focus-visible {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border: 1px solid #808080;
+  background-color: #fff;
+}
+
+.gallery-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 4px 16px;
+  color: #2e2f42;
+  text-align: center;
+}
+
+.gallery-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.gallery-info-label {
+  font-weight: 600;
+}
+
+.gallery-info-value {
+  overflow-wrap: anywhere;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 32px;
+  border: 5px solid #4e75ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+
+.loader.is-hidden {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 479px) {
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form label {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
